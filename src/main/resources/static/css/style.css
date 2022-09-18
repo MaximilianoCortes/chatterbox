@@ -9,9 +9,9 @@ body{
     overflow: hidden;
 }
 
+
+
 .slogan-container{
-	top: 867px;
-	left: 35px;
 	text-shadow: 7px 7px #2a393b;
 	width: 535px;
 	height: auto;
@@ -22,8 +22,7 @@ body{
 	font-weight: 700;
 	line-height: normal;
 	font-stretch: normal;
-	margin-right: 0;
-	margin-bottom: 0;
+	margin-bottom: 2rem;
 	text-decoration: none;
 }
 .slogan1{
@@ -33,7 +32,7 @@ body{
 .slogan2{
 	color: rgb(77, 184, 189);
 }
-.rectangle1{
+.rectangle{
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -53,8 +52,8 @@ body{
 .logo{
 	display: flex;
 	justify-content: start;
-	padding-top: 8rem;
-	padding-left: 4rem;
+	padding-top: 10rem;
+	padding-right: 4rem;
 	align-items: center;
 }
 
