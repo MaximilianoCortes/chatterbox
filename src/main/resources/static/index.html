@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sidebar Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Boxicons CDB Link -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+
+                <img src="img/chatterbox_logo.png" alt="">
+            </div>
+
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <a href="#">
+                    <i class='bx bx-plus-circle' ></i>
+                    <span class="links_name">Agregar tema</span>
+                </a>
+                 <span class="tooltip">Agregar tema</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-conversation' ></i>
+                    <span class="links_name">Tema 1</span>
+                </a>
+                 <span class="tooltip">Tema 1</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-user-pin'></i>
+                    <span class="links_name">Usuario 2</span>
+                </a>
+                 <span class="tooltip">Usuario 2</span>
+            </li>
+        </ul>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                    <div class="icon">
+                        <i class='bx bx-user' ></i>
+                    </div>
+                    <div class="username">Usuario1</div>
+                </div>
+                <div class="log_out"><a href="#">
+                    <i class='bx bx-log-out' id="log_out" ></i>
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home_content">
+        <div class="text">Home content</div>
+    </div>
+    <script>
+        let btn=document.querySelector("#btn")
+        let sidebar=document.querySelector(".sidebar")
+
+        btn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
