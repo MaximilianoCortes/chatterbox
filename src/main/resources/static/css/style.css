@@ -6,11 +6,16 @@
 
 body{
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+    overflow: auto;
 }
 
+.title2{
+	color: #4db3b7;
+}
 
-
+.register-container{
+	height: 45rem;
+}
 .slogan-container{
 	text-shadow: 7px 7px #2a393b;
 	width: 535px;
@@ -25,6 +30,8 @@ body{
 	margin-bottom: 2rem;
 	text-decoration: none;
 }
+
+
 .slogan1{
 	color: rgba(255, 255, 255, 1);
 }
@@ -57,7 +64,7 @@ body{
 	align-items: center;
 }
 
-.login-content{
+.input-content{
 	display: flex;
 	justify-content: flex-start;
 	padding-top: 10rem;
@@ -73,18 +80,18 @@ form{
 	width: 360px;
 }
 
-.login-content img{
+.input-content img{
     height: 100px;
 }
 
-.login-content h2{
+.input-content h2{
 	margin: 15px 0;
 	color: #333;
 	text-transform: uppercase;
 	font-size: 2.9rem;
 }
 
-.login-content .input-div{
+.input-content .input-div{
 	position: relative;
     display: grid;
     grid-template-columns: 7% 93%;
@@ -93,7 +100,7 @@ form{
     border-bottom: 2px solid #d9d9d9;
 }
 
-.login-content .input-div.one{
+.input-content .input-div.one{
 	margin-top: 0;
 }
 
@@ -169,7 +176,7 @@ form{
 	font-family: 'poppins', sans-serif;
 }
 
-.input-div.pass{
+.input-div .end{
 	margin-bottom: 4px;
 }
 
@@ -194,7 +201,7 @@ a:hover{
 	border-radius: 25px;
 	outline: none;
 	border: none;
-	background-image: linear-gradient(to right, #4dbdac, #4db8bd, #4db4bd);
+	background-image: linear-gradient(to right, #4dbdac, #59cdd3, #72e0ec);
 	background-size: 200%;
 	font-size: 1.2rem;
 	color: #fff;
@@ -239,11 +246,8 @@ a:hover{
 		display: none;
 	}
 
-	.wave{
-		display: none;
-	}
 
-	.login-content{
+	.input-content{
 		justify-content: center;
 	}
 }
