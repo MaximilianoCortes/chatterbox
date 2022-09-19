@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sidebar Menu</title>
+    <link rel="stylesheet" href="../static/css/sidebar_style.css">
+    <link rel="stylesheet" href="../static/css/list.css">
+    <link rel="stylesheet" href="../static/css/chats.css">
+    <!-- Boxicons CDB Link -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="sidebar">
+    <div class="logo_content">
+        <a href="chatterbox.html">
+            <div class="logo">
+                <img src="../static/img/chatterbox_logo.png" alt="chatterbox">
+            </div>
+        </a>
+
+        <i class='bx bx-menu' id="btn"></i>
+    </div>
+    <ul class="nav_list">
+        <li>
+            <a href="list.html">
+                <i class='bx bx-plus-circle' ></i>
+                <span class="links_name">Agregar tema</span>
+            </a>
+            <span class="tooltip">Agregar tema</span>
+        </li>
+        <li>
+            <a href="topic_chat.html">
+                <i class='bx bx-conversation' ></i>
+                <span class="links_name">Tema 1</span>
+            </a>
+            <span class="tooltip">Tema 1</span>
+        </li>
+        <li>
+            <a href="private-chat.html">
+                <i class='bx bx-user-pin'></i>
+                <span class="links_name">Usuario 2</span>
+            </a>
+            <span class="tooltip">Usuario 2</span>
+        </li>
+    </ul>
+    <div class="profile_content">
+        <div class="profile">
+            <div class="profile_details">
+                <div class="icon">
+                    <i class='bx bx-user' ></i>
+                </div>
+                <div class="username">
+                    <span id="result"></span>
+                    <script>
+                        document.getElementById("result").innerHTML=localStorage.getItem("textvalue"); //local storage para traer el username
+                    </script>
+                </div>
+            </div>
+            <div class="log_out">
+                <a href="index.html">
+                    <i class='bx bx-log-out' id="log_out" ></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class ="msg-header">
+        <div class="topic-title">
+            <h4>
+                Tema 1
+            </h4>
+        </div>
+    </div>
+
+    <div class="chat-page">
+        <div class="msg-inbox">
+            <div class="chats">
+                <div class="msg-page">
+
+                    <div class="date-time">
+                        <div class="date-time-text">
+                            <p>- 9/08/2022 -</p>
+                        </div>
+                    </div>
+                    <div class="announcement">
+                        <div class="annoucement-text">
+                            <p>se ha creado exitosamente
+                            tema 1</p>
+                        </div>
+                    </div>
+
+                    <div class="date-time">
+                        <div class="date-time-text">
+                            <p>- hoy -</p>
+                        </div>
+                    </div>
+
+
+                    <!---- MENSAJE RECIBIDO ---->
+
+                    <div class="received-msg">
+                        <a href="#">Usuario 2</a>
+                        <div class="received-msg-inbox">
+                            <p>hola, mensaje de usuario 2, hardcoded</p>
+                            <span class="time">11:01 PM</span>
+                        </div>
+                    </div>
+
+
+                    <!---- MENSAJE ENVIADO ---->
+
+                    <div class="sent-msg">
+                        <div class="sent-msg-inbox">
+                            <p>hola, hardcoded igual</p>
+                            <span class="time">11:03 PM</span>
+                        </div>
+                    </div>
+
+
+                    <!---- MENSAJE RECIBIDO ---->
+
+                    <div class="received-msg">
+                        <a href="#">Usuario 2</a>
+                        <div class="received-msg-inbox">
+                            <p>prueba de conversacion, enviando un mensaje bastante largo para mostrar el comportamiento del box</p>
+                            <span class="time">11:04 PM</span>
+                        </div>
+                    </div>
+
+                    <!---- MENSAJE RECIBIDO ---->
+
+                        <div class="received-msg">
+                            <a href="#">Usuario 3</a>
+                            <div class="received-msg-inbox">
+                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum.</p>
+                            <span class="time">11:05 PM</span>
+                         </div>
+                        </div>
+
+                    <!---- MENSAJE ENVIADO ---->
+
+                    <div class="sent-msg">
+                        <div class="sent-msg-inbox">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum.</p>
+                            <span class="time">11:06 PM</span>
+                        </div>
+                    </div>
+
+
+
+                    <!---- MENSAJE RECIBIDO ---->
+
+                    <div class="received-msg">
+                        <a href="#">Usuario 2</a>
+                        <div class="received-msg-inbox">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum.</p>
+                            <span class="time">11:07 PM</span>
+                        </div>
+                    </div>
+
+
+
+                    <!---- MENSAJE ENVIADO ---->
+
+                    <div class="sent-msg">
+                        <div class="sent-msg-inbox">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum.</p>
+                            <span class="time">11:07 PM</span>
+                        </div>
+                    </div>
+
+
+
+                    <!---- MENSAJE RECIBIDO ---->
+
+                    <div class="received-msg">
+                        <a href="#">Usuario 2</a>
+                        <div class="received-msg-inbox">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum.</p>
+                            <span class="time">11:09 PM</span>
+                        </div>
+                    </div>
+
+
+
+                    <!---- MENSAJE ENVIADO ---->
+
+                    <div class="sent-msg">
+                        <div class="sent-msg-inbox">
+                            <p>fin de la demostracion</p>
+                            <span class="time">11:10 PM</span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let btn=document.querySelector("#btn")
+    let sidebar=document.querySelector(".sidebar")
+
+    btn.onclick = function() {
+        sidebar.classList.toggle("active");
+    }
+</script>
+<script type="text/javascript" src="../static/js/main.js"></script>
+</body>
+</html>
