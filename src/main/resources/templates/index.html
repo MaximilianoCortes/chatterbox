@@ -7,6 +7,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+		function passvalues(){
+			var user = document.getElementById("userInput").value;
+			localStorage.setItem("textvalue", user);
+			return false;
+		}
+	</script>
 </head>
 <body>
 	<div class="container">
@@ -24,7 +31,7 @@
            		   </div>
            		   <div class="div">
            		   		<h5>Usuario*</h5>
-           		   		<input type="text" class="input">
+           		   		<input type="text" class="input" id="userInput">
            		   </div>
            		</div>
            		<div class="input-div end">
@@ -38,7 +45,7 @@
             	</div>
             	<a href="password_recovery.html">&#191;Olvidaste tu contrase&#241;a?</a>
 				<a href="register.html">&#191;No tienes una cuenta? Reg&iacute;strate</a>
-            	<input type="submit" class="btn" value="Ingresar">
+            	<input type="submit" class="btn" value="Ingresar" onclick="passvalues();">
             </form>
         </div>
 		<span class="slogan-container img"><span class="slogan1">Porque tu tema de conversaci&oacute;n <span class="slogan2">importa</span></span> </span>

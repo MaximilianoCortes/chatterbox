@@ -115,6 +115,7 @@ body{
     opacity: 0;
     pointer-events: none;
     display: none;
+    font-family: 'Poppins', sans-serif;
 }
 .sidebar.active ul li .tooltip{
     display: flex;

@@ -26,21 +26,21 @@
                     <i class='bx bx-plus-circle' ></i>
                     <span class="links_name">Agregar tema</span>
                 </a>
-                 <span class="tooltip">Agregar tema</span>
+                 <span class="tooltip"> Agregar tema</span>
             </li>
             <li>
                 <a href="#">
                     <i class='bx bx-conversation' ></i>
                     <span class="links_name">Tema 1</span>
                 </a>
-                 <span class="tooltip">Tema 1</span>
+                 <span class="tooltip"> Tema 1</span>
             </li>
             <li>
                 <a href="#">
                     <i class='bx bx-user-pin'></i>
                     <span class="links_name">Usuario 2</span>
                 </a>
-                 <span class="tooltip">Usuario 2</span>
+                 <span class="tooltip"> Usuario 2</span>
             </li>
         </ul>
         <div class="profile_content">
@@ -49,7 +49,12 @@
                     <div class="icon">
                         <i class='bx bx-user' ></i>
                     </div>
-                    <div class="username">Usuario1</div>
+                    <div class="username">
+                        <span id="result"></span>
+                            <script>
+                                document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
+                            </script>
+                    </div>
                 </div>
                 <div class="log_out"><a href="index.html">
                     <i class='bx bx-log-out' id="log_out" ></i>
