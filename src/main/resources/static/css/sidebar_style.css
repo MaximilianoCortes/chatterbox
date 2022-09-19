@@ -15,20 +15,23 @@ body{
     top: 0;
     left: 0;
     height: 100%;
-    width: 78px;
+    width: 240px;
     background: #34576B;
     padding: 6px 14px;
     transition: all 0.5s ease;
+    border-radius: 0px 20px 20px 0px;
 }
 .sidebar.active{
-    width: 240px;
+    width: 78px;
 }
 .sidebar .logo_content .logo{
     color: #fff;
     display: flex;
     height: 200px;
     width: 100%;
-    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+    opacity: 1;
     align-items: center;
     transition: all 0.4s ease;
 }
@@ -38,25 +41,23 @@ body{
     transform: translateX(-100%);
 }
 .sidebar.active .logo_content .logo{
-    pointer-events: none;
-    transform: translateX(100%);
-    opacity: 1;
+    opacity: 0;
 }
 .logo_content .logo_name{
     display: flex;
     font-size: 20px;
     font-weight: 400;
     color: #fff;
-    opacity: 0;
+    opacity: 1;
     transform: translateX(25%);
 }
 .sidebar.active .logo_content .logo_name{
-    opacity: 1;
+    opacity: 0;
 }
 .sidebar #btn{
     position: absolute;
     color: #fff;
-    left: 56%;
+    left: 90%;
     top: 6px;
     font-size: 20px;
     height: 50px;
@@ -67,15 +68,18 @@ body{
     transition: all 0.4s ease;
 }
 .sidebar.active #btn{
-    left: 90%;
+    left: 56%;
+}
+.sidebar #btn:hover {
+    color: gray;
 }
 .sidebar ul{
     margin-top: 20px;
-    transform: translateY(-100%);
+    transform: translateY(0%);
     transition: all 0.4s ease;
 }
 .sidebar.active ul{
-    transform: translateY(0%);
+    transform: translateY(-100%);
 }
 .sidebar ul li{
     position: relative;
@@ -87,13 +91,13 @@ body{
 
 }
 .sidebar .links_name{
-    opacity: 0;
-    pointer-events: none;
+    opacity: 1;
+    pointer-events: auto;
     transition: all 0.5s ease;
 }
 .sidebar.active .links_name{
-    opacity: 1;
-    pointer-events: auto;
+    opacity: 0;
+    pointer-events: none;
 }
 .sidebar ul li .tooltip{
     position: absolute;
@@ -110,9 +114,10 @@ body{
     transition: 0s;
     opacity: 0;
     pointer-events: none;
+    display: none;
 }
 .sidebar.active ul li .tooltip{
-    display: none;
+    display: flex;
 }
 .sidebar ul li:hover .tooltip{
     transition: all 0.5s ease;
@@ -151,26 +156,27 @@ body{
     position: relative;
     padding: 12px 6px;
     height: 60px;
-    background:none;
+    background-color:#1D4459;
     transition: all 0.4s ease;
+    border-radius: 0px 0px 20px 0px;
 }
 .sidebar.active .profile_content .profile{
-    background-color: #1D4459;
+    background: none;
 
 }
 .sidebar .profile_content .profile .profile_details{
     display: flex;
     align-items: center;
-    opacity:0;
-    pointer-events:none;
-    white-space: nowrap;
-    transform: translateX(-100%);
-}
-.sidebar.active .profile .profile_details{
     opacity:1;
     pointer-events:auto;
-    transition: all 0.4s ease;
+    white-space: nowrap;
     transform: translateX(-0%);
+}
+.sidebar.active .profile .profile_details{
+    opacity:0;
+    pointer-events:none;
+    transition: all 0.4s ease;
+    transform: translateX(-100%);
 }
 .profile .profile_details .icon i{
     font-size: 40px;
@@ -188,7 +194,7 @@ body{
 .profile #log_out{
     color: Red;
     position: absolute;
-    left: 50%;
+    left: 88%;
     bottom: 6px;
     transform: translateX(-50%);
     min-width: 45px;
@@ -199,23 +205,20 @@ body{
     transition: all 0.4s ease;
     background:none;
 }
-.sidebar.active .profile #log_out{
-    left: 88%;
+.profile #log_out:hover{
+    color: #8d000d;
 }
-.home_content{
+.sidebar.active .profile #log_out{
+    left: 50%;
+}
+.container{
     position:absolute;
     height:100%;
-    width:calc(100% - 90px);
-    left:90px;
-    transition: all 0.5s ease;
-}
-.home_content .text{
-    font-size: 25px;
-    font-weight: 500;
-    color: #1D4459;
-    margin-top: 12px;
-}
-.sidebar.active ~ .home_content{
     width:calc(100% - 250px);
     left:250px;
+    transition: all 0.5s ease;
+}
+.sidebar.active ~ .container{
+    width:calc(100% - 90px);
+    left:90px;
 }
