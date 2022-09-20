@@ -61,16 +61,18 @@
 
 .sent-msg{
     display: inline-block;
-    padding: 0 0 0 10px;
+    padding:5px 0 0 0 ;
     vertical-align: top;
-    min-width: 5%;
-    max-width: 60%;
+    max-width: 20%;
+    max-height: 10%;
+    min-width: 140px;
+    min-height: 100px;
     width: fit-content;
     margin: 1%;
+    margin-bottom: 15px;
 }
 .sent-msg a{
     text-decoration: none;
-
 }
 
 .sent-msg-inbox{
@@ -79,13 +81,16 @@
     border-radius:15px;
     color: #fff;
     font-size: 20px;
-    margin: 5px;
+    margin: 1px;
     padding: 12px;
     transition: 0.5s;
 
 }
 .sent-msg-inbox:hover{
     background: #00c4ff
+}
+.sent-msg-inbox:target{
+    background: #ffea00
 }
 
 
@@ -133,7 +138,7 @@ input[type="text"]{
 input[type="text"]:focus{
     outline: none;
 }
-input[type="submit"]{
+input[type="button"]{
     position: relative;
     left: -5px;
     border-radius: 0px 25px 25px 0px;
@@ -145,29 +150,83 @@ input[type="submit"]{
     background: #4AAAAFFF;
     color: #fff;
 }
+input[type="button"]:hover{
+    background: #00c4ff;
+}input[type="submit"]{
+     position: relative;
+     left: -5px;
+     border-radius: 0px 25px 25px 0px;
+     width: 9%;
+     height: 50px;
+     border: none;
+     outline: none;
+     cursor: pointer;
+     background: #4AAAAFFF;
+     color: #fff;
+ }
 input[type="submit"]:hover{
     background: #00c4ff;
 }
 
 
-.btn{
-    transform: translate(100%, -50%);
-    display: block;
-    width: 200px;
-    height: 50px;
-    border-radius: 25px;
-    outline: none;
-    border: none;
-    background-image: linear-gradient(to right, #4dbdac, #4db8bd, #4db4bd);
-    background-size: 200%;
-    font-size: 1.2rem;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    margin: 1rem 0;
-    cursor: pointer;
-    transition: .5s;
+
+
+.btn-container{
+    border: 1px;
+    width: 100%;
+    height: 10%;
+    min-height: 80px;
+    min-width: 300px;
+    border-bottom: none;
+    background-color: #34576B;
+    border-radius: 0px 0px 20px 20px;
 }
-.btn:hover{
-    background-position: right;
+.btn-box{
+    position: absolute;
+    top: 93%;
+    left: 1%;
+    width: 99%;
+}
+
+.btn-box input{
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+
+}
+
+.btn-box .add{
+    float: left;
+    border-radius: 20px;
+    min-width: 150px;
+    width: 20%;
+    min-height: 50px;
+    height: 50px;
+    margin: 10px;
+    position: relative;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #4AAAAFFF;
+    color: #fff;
+}
+.btn-box .create{
+    float: right;
+    border-radius: 20px;
+    min-width: 150px;
+    width: 20%;
+    min-height: 50px;
+    height: 50px;
+    margin: 10px;
+    position: relative;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #4AAAAFFF;
+    color: #fff;
+}
+.btn-box input[type="submit"]:hover{
+    background: #00c4ff;
 }
