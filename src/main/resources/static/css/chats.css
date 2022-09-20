@@ -42,7 +42,7 @@
     padding: 0px 15px 0 25px;
 }
 .msg-page{
-    height: 790px;
+    height: 780px;
     width:calc(100% + 15px);
     overflow-y: auto;
     overflow-x: hidden;
