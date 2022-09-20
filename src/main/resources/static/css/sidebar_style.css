@@ -223,3 +223,14 @@ body{
     width:calc(100% - 90px);
     left:90px;
 }
+.home_content{
+    position:absolute;
+    height:100%;
+    width:calc(100% - 250px);
+    left:250px;
+    transition: all 0.5s ease;
+}
+.sidebar.active ~ .home_content{
+    width:calc(100% - 90px);
+    left:90px;
+}

@@ -17,7 +17,7 @@
     border-bottom: none;
     display: inline-block;
     background-color: #34576B;
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
 }
 .msg-header .topic-title{
     width: 100%;
@@ -43,7 +43,19 @@
 }
 .msg-page{
     height: 700px;
+    width:calc(100% + 15px);
     overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-face-color: #8d000d;
+}
+
+.msg-page::-webkit-scrollbar {
+    width: 8px;
+    background: #2a393b;
+}
+
+.msg-page::-webkit-scrollbar-thumb {
+    background: #4aaaaf;
 }
 .received-msg{
     display: inline-block;
@@ -112,7 +124,7 @@
     display: inline-block;
     padding: 0 0 0 10px;
     vertical-align: top;
-    min-width: 5%;
+    min-width: 150px;
     max-width: 14%;
     width: fit-content;
     margin-left: 43%;
@@ -149,5 +161,29 @@
     font-size: 13px;
     margin: 8px 0 0;
 }
+.msg-bottom{
+    position: relative;
+    height: 10%;
+    background-color: #007bff;
+}
+.input-group{
+    float: right;
+    margin-top: 13px;
+    margin-right: 20px;
+    outline: none !important;
+    border-radius: 20px;
+    width: 61% !important;
+    background-color: #fff;
+
+}
+.form-control{
+    border: none !important;
+    border-radius: 20px !important;
+}
+.input-group-text{
+    background: transparent !important;
+    border: none !important;
+}
+
 
 
